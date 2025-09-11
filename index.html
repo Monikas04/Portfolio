@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Main css-->
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title> 
+</head>    
+<body>
+    <!--Header Design-->
+    <header class="header">
+        <a href="#" class="logo">My Portfolio</a>
+
+        <i class="fa-solid fa-bars" id="menu-icons"></i>
+        
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>                  
+            </nav>
+    </header>
+
+
+   <!--Home section Design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Monika S</h1>
+            <h3>And I'm a <span>Web Developer & UI/UX Designer</span></h3>
+            <p>I'm a Web Developer passoniate about building responsive, clean,<br>
+              and user-friendly websites using modern 
+          technologies.</p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-square-envelope"></i></a>
+            </div>
+            <a href="#" class="btn">About Me</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/Monika.JPG" alt="">
+        </div>
+    </section>     
+        
+        
+
+
+    <!--About section Design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/Monika.JPG" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>I'm Monika S , a Web Developer and UI/UX Designer with a degree in Computer Science specializing in Cognitive Systems. I enjoy combining
+              technology and creativity to design responsive websites and intutive user experiences. With my background in computer science and cognitive systems, I bring
+              a unique perspective to my work, focusing on both functionality and user-centric design. I'm passionate about learning new technologies and 
+              staying updated with industry trends to deliver innovative solutions.
+            </p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+    </section>    
+
+
+   <!-- Skills section Design -->
+   <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <h2 data-aos="fade-center">My Skills</h2>
+
+    <!-- Frontend -->
+    <div class="skill-category" data-aos="fade-center" data-aos-delay="100">
+      <h3>Frontend</h3>
+      <div class="skills-list">
+        <div class="skill">🌐 HTML</div>
+        <div class="skill">🎨 CSS</div>
+        <div class="skill">⚡ JavaScript</div>
+        <div class="skill">⚛️ React</div>
+        <div class="skill">📱 UI/UX Design</div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="skill-category" data-aos="fade-center" data-aos-delay="200">
+      <h3>Backend</h3>
+      <div class="skills-list">
+        <div class="skill">🐍 Python</div>
+        <div class="skill">💻 Java</div>
+        <div class="skill">🗄️ SQL</div>
+        <div class="skill">☁️ AWS</div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category" data-aos="fade-center" data-aos-delay="300">
+      <h3>Tools</h3>
+      <div class="skills-list">
+        <div class="skill">🔧 Git/GitHub</div>
+        <div class="skill">🖥️ VS Code</div>
+        <div class="skill">🖌️ Figma</div>
+        <div class="skill">📦 npm</div>
+        <div class="skill">🧪 Postman</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   <!-- JavaScript for animation -->
+     <script>
+     const skills = document.querySelectorAll('.skill');
+     skills.forEach(skill => {
+      skill.addEventListener('click', () => {
+        skills.forEach(s => s.classList.remove('active'));
+        skill.classList.add('active');
+      });
+      });
+      </script>
+
+    <!--js-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+    </script>
+
+
+
+    <!-- Projects section Design -->
+
+     <section class="projects" id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card" onclick="openModal(0)">
+      <img src="images/bonsai-rock-milky-5120x3413-21130.jpg" alt="Project 1 Screenshot">
+      <h3>Portfolio Website</h3>
+      <p>A personal website to showcase my skills, projects, and resume.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card" onclick="openModal(1)">
+      <img src="images/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner.jpg" alt="Project 2 Screenshot">
+      <h3>Restaurant App</h3>
+      <p>Designed a Restaurant menu.</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" onclick="openModal(2)">
+      <img src="images/solid-gypsum-wall-textured-background.jpg" alt="Project 3 Screenshot">
+      <h3>Scholarhip App</h3>
+      <p>The scholarship app lets you easily find the scholarship who are really needed.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal / Popup -->
+<div id="projectModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Project Screenshot">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <p id="modalTech"></p>
+    <div id="modalLinks"></div>
+    <button onclick="prevProject()">&#10094; Prev</button>
+    <button onclick="nextProject()">Next &#10095;</button>
+  </div>
+</div>
+
+<!--js for modal functionality-->
+
+<script>
+const projects = [
+  {
+    title: "Portfolio Website",
+    image: "images/bonsai-rock-milky-5120x3413-21130.jpg",
+    description: "A responsive website showcasing my skills and projects.",
+    tech: "Tech: HTML, CSS, JavaScript",
+    links: [
+      {name: "GitHub", url: "#"},
+    ]
+  },
+  {
+    title: "Restaurant App",
+    image: "images/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner.jpg",
+    description: "A simple Todo app with add, edit, delete features.",
+    tech: "Tech: HTML, CSS, JavaScript",
+    links: [
+      {name: "GitHub", url: "#"},
+    ]
+  },
+  {
+    title: "Scholarship App",
+    image: "images/solid-gypsum-wall-textured-background.jpg",
+    description: "Shows current weather using an API.",
+    tech: "Tech: HTML, CSS, JavaScript, API",
+    links: [
+      {name: "GitHub", url: "#"},
+    ]
+  }
+];
+
+let currentIndex = 0;
+
+function openModal(index) {
+  currentIndex = index;
+  updateModal();
+  document.getElementById('projectModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('projectModal').style.display = 'none';
+}
+
+function updateModal() {
+  const project = projects[currentIndex];
+  document.getElementById('modalTitle').innerText = project.title;
+  document.getElementById('modalImage').src = project.image;
+  document.getElementById('modalDescription').innerText = project.description;
+  document.getElementById('modalTech').innerText = project.tech;
+
+  const linksDiv = document.getElementById('modalLinks');
+  linksDiv.innerHTML = '';
+  project.links.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.innerText = link.name;
+    a.target = '_blank';
+    a.style.margin = '0 10px';
+    linksDiv.appendChild(a);
+  });
+}
+
+function nextProject() {
+  currentIndex = (currentIndex + 1) % projects.length;
+  updateModal();
+}
+
+function prevProject() {
+  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+  updateModal();
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('projectModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+</script>
+
+
+  <!--Contact section Design-->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+              </div>
+
+              <div class="input-box">
+                <input type="number" placeholder="Mobile Number">                
+                <input type="text" placeholder="Subject">
+              </div>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+              <input type="submit" value="Send Message" class="btn">
+                
+            </form>
+
+    <!--Footer section Design-->
+    
+    <footer class="footer">
+        <div class="footer-text">
+          <p>Copyright &copy; 2025 by @Monika S. All Rights Reserved.</p>
+            
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+
+    </footer>
+  
+
+       <script src="script.js"></script>
+</body>    
+</html>
+
+
+
