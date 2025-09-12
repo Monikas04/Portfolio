@@ -149,10 +149,20 @@ span {
     align-items: center;
     gap: 2rem;
     background: var(--bg--color);
-}   
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
 .about-img img {
-    width: 25vw;
+    width: 290px;
+    height:280px;
+    object-fit: fill;
+    border-radius: 50%;
+    border: 5px solid #53274e;
 }
 
 .heading {
