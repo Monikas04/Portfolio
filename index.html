@@ -49,8 +49,50 @@
                   <i class="fa-solid fa-square-envelope"></i>
                 </a>
             </div>
-            <a href="#" class="btn">Cover letter</a>
-          </div>
+
+   <!-- Cover Letter Box -->
+<div class="cover-letter-box" id="coverLetterBox">
+  Cover Letter
+</div>
+
+<!-- Popup download options placed outside the box -->
+<div class="download-options" id="downloadOptions">
+  <a href="files/Cover letter.pdf" download>Download PDF</a>
+  <a href="files/Cover letter.docx" download>Download DOC</a>
+</div>
+  </div>
+
+  
+<script>
+  const coverBox = document.getElementById("coverLetterBox");
+  const downloadOptions = document.getElementById("downloadOptions");
+
+  // Position the popup below the box dynamically
+  function positionPopup() {
+    const rect = coverBox.getBoundingClientRect();
+    downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
+    downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
+  }
+
+  // Toggle popup when box clicked
+  coverBox.addEventListener("click", (e) => {
+    e.stopPropagation();
+    positionPopup();
+    downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
+  });
+
+  // Click outside → hide popup
+  document.addEventListener("click", () => {
+    downloadOptions.style.display = "none";
+  });
+
+  // Reposition on window resize
+  window.addEventListener("resize", () => {
+    if(downloadOptions.style.display === "block") positionPopup();
+  });
+</script>
+ 
+            
     </section>     
         
         

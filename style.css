@@ -140,6 +140,57 @@ span {
     transform: scale(1.1);
 }   
 
+.cover-letter-box {
+  width: 160px;
+  padding: 10px;
+  background: rgb(98, 47, 87);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  font-size: 18px;
+}
+
+.cover-letter-box:hover {
+  background: rgb(112, 48, 100);
+}
+
+.download-options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1 px solid #ccc;
+  border-radius: 5px;
+  width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.download-options a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #b43ba8;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.download-options a:hover {
+   background: #aa438d;
+   color: rgb(0, 0, 0);
+}
+
+.download-options a:last-child {
+    border-bottom: none;
+  }
+
+
+
 
 /* about section design */
 
