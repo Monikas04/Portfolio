@@ -98,7 +98,47 @@ span {
 
 .home-content p {
     font-size: 1.6rem;
-}   
+}
+
+/* Default Light Mode */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Section Styling */
+section.content {
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Toggle Button */
+#mode-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #96446d;
+  color: white;
+  font-size: 16px;
+}
+
+body.dark #mode-toggle {
+  background-color: #96446d;
+  color: rgb(0, 0, 0);
+}
+
 
 .social-media a {
    display: inline-flex;

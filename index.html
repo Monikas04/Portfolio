@@ -25,9 +25,37 @@
                 <a href="#skills">Skills</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>                  
+                <a href="#contact">Contact</a>
+                <button id="mode-toggle">🌙</button>                  
             </nav>
+             
     </header>
+
+    <script>
+      const toggleBtn = document.getElementById("mode-toggle");
+const body = document.body;
+
+// Check if dark mode was saved earlier
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.remove("light");
+  body.classList.add("dark");
+  toggleBtn.textContent = "☀️ Light Mode";
+}
+
+// Toggle function
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  body.classList.toggle("light");
+
+  if (body.classList.contains("dark")) {
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
+});
+    </script>
 
 
    <!--Home section Design-->

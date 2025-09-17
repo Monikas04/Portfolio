@@ -30,12 +30,6 @@
 
 
 
-
-
-
-
-
-
 const projects = [
   {
     title: "Portfolio Website",
