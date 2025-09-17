@@ -63,35 +63,8 @@
 </div>
   </div>
 
-  
-<script>
-  const coverBox = document.getElementById("coverLetterBox");
-  const downloadOptions = document.getElementById("downloadOptions");
+  <!--Js for cover letter-->
 
-  // Position the popup below the box dynamically
-  function positionPopup() {
-    const rect = coverBox.getBoundingClientRect();
-    downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
-    downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
-  }
-
-  // Toggle popup when box clicked
-  coverBox.addEventListener("click", (e) => {
-    e.stopPropagation();
-    positionPopup();
-    downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
-  });
-
-  // Click outside → hide popup
-  document.addEventListener("click", () => {
-    downloadOptions.style.display = "none";
-  });
-
-  // Reposition on window resize
-  window.addEventListener("resize", () => {
-    if(downloadOptions.style.display === "block") positionPopup();
-  });
-</script>
  
             
     </section>     
