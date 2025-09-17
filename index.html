@@ -182,9 +182,8 @@
 
 
 
-    <!-- Projects section Design -->
-
-     <section class="projects" id="projects">
+<!-- Projects section Design -->
+<section class="projects" id="projects">
   <h2 class="section-title">My Projects</h2>
   <div class="projects-container">
 
@@ -205,7 +204,7 @@
     <!-- Project 3 -->
     <div class="project-card" onclick="openModal(2)">
       <img src="images/solid-gypsum-wall-textured-background.jpg" alt="Project 3 Screenshot">
-      <h3>Scholarhip App</h3>
+      <h3>Scholarship App</h3>
       <p>The scholarship app lets you easily find the scholarship who are really needed.</p>
     </div>
 
@@ -213,7 +212,7 @@
 </section>
 
 <!-- Modal / Popup -->
-<div id="projectModal" class="modal">
+<div id="projectModal" class="modal" style="display:none;">
   <span class="close" onclick="closeModal()">&times;</span>
   <div class="modal-content">
     <img id="modalImage" src="" alt="Project Screenshot">
@@ -226,99 +225,98 @@
   </div>
 </div>
 
-<!--js for modal functionality-->
-
+<!-- JS for modal functionality -->
 <script>
   const projects = [
-  {
-    title: "Portfolio Website",
-    image: "https://via.placeholder.com/300x180",
-    description: "A responsive website showcasing my skills and projects.",
-    tech: "Tech: HTML, CSS, JavaScript",
-    links: [
-      {name: "GitHub", url: "#"},
-      {name: "Live Demo", url: "#"}
-    ]
-  },
-  {
-    title: "Todo App",
-    image: "https://via.placeholder.com/300x180",
-    description: "A simple Todo app with add, edit, delete features.",
-    tech: "Tech: HTML, CSS, JavaScript",
-    links: [
-      {name: "GitHub", url: "#"},
-      {name: "Live Demo", url: "#"}
-    ]
-  },
-  {
-    title: "Weather App",
-    image: "https://via.placeholder.com/300x180",
-    description: "Shows current weather using an API.",
-    tech: "Tech: HTML, CSS, JavaScript, API",
-    links: [
-      {name: "GitHub", url: "#"},
-      {name: "Live Demo", url: "#"}
-    ]
+    {
+      title: "Portfolio Website",
+      image: "images/bonsai-rock-milky-5120x3413-21130.jpg",
+      description: "A personal website to showcase my skills, projects, and resume.",
+      tech: "Tech: HTML, CSS, JavaScript",
+      links: [
+        { name: "GitHub", url: "#" },
+        { name: "Live Demo", url: "#" }
+      ]
+    },
+    {
+      title: "Restaurant App",
+      image: "images/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner.jpg",
+      description: "Designed a Restaurant menu.",
+      tech: "Tech: HTML, CSS",
+      links: [
+        { name: "GitHub", url: "#" },
+        { name: "Live Demo", url: "#" }
+      ]
+    },
+    {
+      title: "Scholarship App",
+      image: "images/solid-gypsum-wall-textured-background.jpg",
+      description: "The scholarship app lets you easily find the scholarship who are really needed.",
+      tech: "Tech: HTML, CSS, JavaScript",
+      links: [
+        { name: "GitHub", url: "#" },
+        { name: "Live Demo", url: "#" }
+      ]
+    }
+  ];
+
+  let currentIndex = 0;
+
+  function openModal(index) {
+    currentIndex = index;
+    updateModal();
+    document.getElementById('projectModal').style.display = 'block';
+
+    // Optional animation for clicked card
+    const card = document.querySelectorAll('.project-card')[index];
+    card.style.transform = 'scale(1.07) translateY(-10px)';
+    setTimeout(() => {
+      card.style.transform = ''; // reset after animation
+    }, 300);
   }
-];
 
-let currentIndex = 0;
-
-function openModal(index) {
-  currentIndex = index;
-  updateModal();
-  document.getElementById('projectModal').style.display = 'block';
-
-  // Optional: animate card lift effect
-  const card = document.querySelectorAll('.project-card')[index];
-  card.style.transform = 'scale(1.07) translateY(-10px)';
-  setTimeout(() => {
-    card.style.transform = ''; // reset after animation
-  }, 300);
-}
-
-function closeModal() {
-  document.getElementById('projectModal').style.display = 'none';
-}
-
-function updateModal() {
-  const project = projects[currentIndex];
-  document.getElementById('modalTitle').innerText = project.title;
-  document.getElementById('modalImage').src = project.image;
-  document.getElementById('modalDescription').innerText = project.description;
-  document.getElementById('modalTech').innerText = project.tech;
-
-  const linksDiv = document.getElementById('modalLinks');
-  linksDiv.innerHTML = '';
-  project.links.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.innerText = link.name;
-    a.target = '_blank';
-    a.style.margin = '0 10px';
-    linksDiv.appendChild(a);
-  });
-}
-
-function nextProject() {
-  currentIndex = (currentIndex + 1) % projects.length;
-  updateModal();
-}
-
-function prevProject() {
-  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-  updateModal();
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-  const modal = document.getElementById('projectModal');
-  const content = document.querySelector('.modal-content');
-  if (event.target === modal || !content.contains(event.target)) {
-    closeModal();
+  function closeModal() {
+    document.getElementById('projectModal').style.display = 'none';
   }
-}
+
+  function updateModal() {
+    const project = projects[currentIndex];
+    document.getElementById('modalTitle').innerText = project.title;
+    document.getElementById('modalImage').src = project.image;
+    document.getElementById('modalDescription').innerText = project.description;
+    document.getElementById('modalTech').innerText = project.tech;
+
+    const linksDiv = document.getElementById('modalLinks');
+    linksDiv.innerHTML = '';
+    project.links.forEach(link => {
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.innerText = link.name;
+      a.target = '_blank';
+      a.style.margin = '0 10px';
+      linksDiv.appendChild(a);
+    });
+  }
+
+  function nextProject() {
+    currentIndex = (currentIndex + 1) % projects.length;
+    updateModal();
+  }
+
+  function prevProject() {
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+    updateModal();
+  }
+
+  // Close modal when clicking outside the modal-content
+  window.onclick = function(event) {
+    const modal = document.getElementById('projectModal');
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
 </script>
+
 
   <!--Contact section Design-->
 
