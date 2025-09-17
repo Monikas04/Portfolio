@@ -51,23 +51,18 @@
                 </a>
             </div>
 
-   <!-- Cover Letter Box -->
-<div class="cover-letter-box" id="coverLetterBox">
-  Cover Letter
-</div>
+      <!-- Cover Letter Box -->
+       <div class="cover-letter-box" id="coverLetterBox">
+        Cover Letter
+      </div>
 
-<!-- Popup download options placed outside the box -->
-<div class="download-options" id="downloadOptions">
-  <a href="files/Cover letter.pdf" download>Download PDF</a>
-  <a href="files/Cover letter.docx" download>Download DOC</a>
-</div>
-  </div>
-
-  <!--Js for cover letter-->
-
- 
-            
-    </section>     
+       <!-- Popup download options placed outside the box -->
+        <div class="download-options" id="downloadOptions">
+          <a href="files/Cover letter.pdf" download>Download PDF</a>
+          <a href="files/Cover letter.docx" download>Download DOC</a>
+        </div>
+      </div>
+      </section>     
         
         
 
@@ -203,86 +198,6 @@
 
 <!--js for modal functionality-->
 
-<script>
-const projects = [
-  {
-    title: "Portfolio Website",
-    image: "images/bonsai-rock-milky-5120x3413-21130.jpg",
-    description: "A responsive website showcasing my skills and projects.",
-    tech: "Tech: HTML, CSS, JavaScript",
-    links: [
-      {name: "GitHub", url: "#"},
-    ]
-  },
-  {
-    title: "Restaurant App",
-    image: "images/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner.jpg",
-    description: "A simple Todo app with add, edit, delete features.",
-    tech: "Tech: HTML, CSS, JavaScript",
-    links: [
-      {name: "GitHub", url: "#"},
-    ]
-  },
-  {
-    title: "Scholarship App",
-    image: "images/solid-gypsum-wall-textured-background.jpg",
-    description: "Shows current weather using an API.",
-    tech: "Tech: HTML, CSS, JavaScript, API",
-    links: [
-      {name: "GitHub", url: "#"},
-    ]
-  }
-];
-
-let currentIndex = 0;
-
-function openModal(index) {
-  currentIndex = index;
-  updateModal();
-  document.getElementById('projectModal').style.display = 'block';
-}
-
-function closeModal() {
-  document.getElementById('projectModal').style.display = 'none';
-}
-
-function updateModal() {
-  const project = projects[currentIndex];
-  document.getElementById('modalTitle').innerText = project.title;
-  document.getElementById('modalImage').src = project.image;
-  document.getElementById('modalDescription').innerText = project.description;
-  document.getElementById('modalTech').innerText = project.tech;
-
-  const linksDiv = document.getElementById('modalLinks');
-  linksDiv.innerHTML = '';
-  project.links.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.innerText = link.name;
-    a.target = '_blank';
-    a.style.margin = '0 10px';
-    linksDiv.appendChild(a);
-  });
-}
-
-function nextProject() {
-  currentIndex = (currentIndex + 1) % projects.length;
-  updateModal();
-}
-
-function prevProject() {
-  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-  updateModal();
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-  const modal = document.getElementById('projectModal');
-  if (event.target === modal) {
-    closeModal();
-  }
-}
-</script>
 
 
   <!--Contact section Design-->

@@ -1,3 +1,4 @@
+
  const coverBox = document.getElementById("coverLetterBox");
   const downloadOptions = document.getElementById("downloadOptions");
 
