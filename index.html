@@ -65,36 +65,35 @@
 
       <script>
          const coverBox = document.getElementById("coverLetterBox");
-  const downloadOptions = document.getElementById("downloadOptions");
+         const downloadOptions = document.getElementById("downloadOptions");
 
-  // Position the popup below the box dynamically
-  function positionPopup() {
-    const rect = coverBox.getBoundingClientRect();
-    downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
-    downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
-  }
+     // Position the popup below the box dynamically
+     function positionPopup() {
+      const rect = coverBox.getBoundingClientRect();
+      downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
+      downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
+    }
 
-  // Toggle popup when box clicked
-  coverBox.addEventListener("click", (e) => {
-    e.stopPropagation();
-    positionPopup();
-    downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
-  });
+     // Toggle popup when box clicked
+     coverBox.addEventListener("click", (e) => {
+      e.stopPropagation();
+      positionPopup();
+      downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
+    });
 
-  // Click outside → hide popup
-  document.addEventListener("click", () => {
-    downloadOptions.style.display = "none";
-  });
+     // Click outside → hide popup
+     document.addEventListener("click", () => {
+      downloadOptions.style.display = "none";
+    });
 
-  // Reposition on window resize
-  window.addEventListener("resize", () => {
-    if(downloadOptions.style.display === "block") positionPopup();
-  });
-      </script>     
-      gi
-    </section>     
-        
-        
+     // Reposition on window resize
+     window.addEventListener("resize", () => {
+      if(downloadOptions.style.display === "block") positionPopup();
+    });
+    
+    </script>
+  </section>     
+    
 
 
     <!--About section Design-->
@@ -116,13 +115,13 @@
     </section>    
 
 
-   <!-- Skills section Design -->
-   <section class="skills-section" id="skills">
-    <div class="skills-container">
-      <h2 data-aos="fade-center">My Skills</h2>
+     <!-- Skills section Design -->
+      <section class="skills-section" id="skills">
+        <div class="skills-container">
+          <h2 data-aos="fade-center">My Skills</h2>
 
-    <!-- Frontend -->
-    <div class="skill-category" data-aos="fade-center" data-aos-delay="100">
+     <!-- Frontend -->
+      <div class="skill-category" data-aos="fade-center" data-aos-delay="100">
       <h3>Frontend</h3>
       <div class="skills-list">
         <div class="skill">🌐 HTML</div>
@@ -133,10 +132,10 @@
       </div>
     </div>
 
-    <!-- Backend -->
-    <div class="skill-category" data-aos="fade-center" data-aos-delay="200">
-      <h3>Backend</h3>
-      <div class="skills-list">
+     <!-- Backend -->
+      <div class="skill-category" data-aos="fade-center" data-aos-delay="200">
+        <h3>Backend</h3>
+        <div class="skills-list">
         <div class="skill">🐍 Python</div>
         <div class="skill">💻 Java</div>
         <div class="skill">🗄️ SQL</div>
@@ -160,6 +159,7 @@
 </section>
 
    <!-- JavaScript for animation -->
+
      <script>
      const skills = document.querySelectorAll('.skill');
      skills.forEach(skill => {
