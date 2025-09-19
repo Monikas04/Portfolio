@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
-    background: #96446d;
+    background: #17464f;
     color: #000000;
     padding: 2rem;
 }
@@ -28,7 +28,7 @@ h1 {
     height: auto;
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(49, 83, 95, 0.1);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ h1 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(243, 243, 243, 0.15);
+    box-shadow: 0 6px 20px rgba(21, 67, 96, 0.15);
 }
 
 /* Logo placeholder */
@@ -54,7 +54,7 @@ h1 {
 
 /* Example brand color (AWS orange) */
 .logo.aws {
-    background: #b93d98;
+    background: #3a7e8c;
 }
 
 /* Certificate title */
@@ -67,14 +67,14 @@ h1 {
 /* Meta info */
 .meta {
     font-size: 0.9rem;
-    color: #4c143b;
+    color: #116788;
     margin-bottom: 1rem;
 }
 
 /* Button */
 .btn {
     text-decoration: none;
-    background: #97275f;   /*theme color */
+    background: #0e5178;   /*theme color */
     color: #fff;
     padding: 0.6rem 1rem;
     border-radius: 8px;
@@ -84,5 +84,5 @@ h1 {
 }
 
 .btn:hover {
-    background: #c02ca5;
+    background: #1567ab;
 }

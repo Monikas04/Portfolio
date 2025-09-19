@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg--color: #96446d;
-    --snd-bf-color: #6b1e85;
+    --bg--color: #17464f;
+    --snd-bf-color: #081a27;
     --text--color: #ffffff;
-    --main-color: #1b0f38;
+    --main-color: #417786;
 }
 
 html {
@@ -102,7 +102,7 @@ span {
 
 /* Default Light Mode */
 body.light {
-  background-color: #96446d;
+  background-color: #17464f;
   color: #000000;
 }
 
@@ -129,13 +129,13 @@ section.content {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #96446d;
+  background-color: #17464f;
   color: white;
   font-size: 16px;
 }
 
 body.dark #mode-toggle {
-  background-color: #96446d;
+  background-color: #17464f;
   color: rgb(0, 0, 0);
 }
 
@@ -183,7 +183,7 @@ body.dark #mode-toggle {
 .cover-letter-box {
   width: 160px;
   padding: 10px;
-  background: rgb(98, 47, 87);
+  background: #081a27;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
@@ -193,7 +193,7 @@ body.dark #mode-toggle {
 }
 
 .cover-letter-box:hover {
-  background: rgb(112, 48, 100);
+  background: #417786;
 }
 
 .download-options {
@@ -215,13 +215,13 @@ body.dark #mode-toggle {
   padding: 10px;
   color: #333;
   text-decoration: none;
-  border-bottom: 1px solid #b43ba8;
+  border-bottom: 1px solid #081a27;
   text-align: center;
   transition: 0.3s;
 }
 
 .download-options a:hover {
-   background: #aa438d;
+   background: #417786;
    color: rgb(0, 0, 0);
 }
 
@@ -253,7 +253,7 @@ body.dark #mode-toggle {
     height:280px;
     object-fit: fill;
     border-radius: 50%;
-    border: 5px solid #53274e;
+    border: 5px solid #081a27;
 }
 
 .heading {
@@ -302,7 +302,7 @@ body.dark #mode-toggle {
 .skills-container h2 {
   font-size: 2.5rem;
   margin: 0;
-  color: #38bdf8;
+  color: #081a27;
 }
 
 .skill-category {
@@ -350,7 +350,7 @@ body.dark #mode-toggle {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, #bc5dae, #7c3274, #af168e, #992480);
+  background: linear-gradient(45deg, #bc5dae, #7c3274);
   background-size: 400% 400%;
   border-radius: 15px;
   filter: blur(20px);
