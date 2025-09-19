@@ -1,0 +1,86 @@
+/* Reset / base styles */
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    padding: 2rem;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Certificate card */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Logo placeholder */
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    color: #fff;
+}
+
+/* Example brand color (AWS orange) */
+.logo.aws {
+    background: #ff9900;
+}
+
+/* Certificate title */
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Meta info */
+.meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Button */
+.btn {
+    text-decoration: none;
+    background: #96446d;   /* your portfolio theme color */
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #6b1e85;
+}
