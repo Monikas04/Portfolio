@@ -75,6 +75,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 100vh;
 }
 
 .home-content h3 {
@@ -124,8 +126,8 @@ section.content {
 
 /* Toggle Button */
 #mode-toggle {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 8px;
+  padding: 5px 8px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -263,28 +265,31 @@ body.dark #mode-toggle {
 
 .about {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 2rem;
     background: var(--bg--color);
+    padding: 11rem 2rem 2rem;
+    margin-top: 0;
 }
 
 .about-img {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 80%;
 }
 
 .about-img img {
-    width: 290px;
-    height:280px;
+    width: 240px;
+    height:240px;
     object-fit: fill;
     border-radius: 50%;
     border: 5px solid #081a27;
 }
 
 .heading {
-    text-align: center;
+    text-align: left;
     font-size: 4.5rem;
 }
 
@@ -301,6 +306,8 @@ body.dark #mode-toggle {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
+
 
 /* skills section design */
 
