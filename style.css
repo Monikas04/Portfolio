@@ -616,7 +616,7 @@ body.dark #mode-toggle {
   padding: 1rem;
   font-size: 1.6rem;
   color: #ffffff;
-  background: #3c5271;
+  background: #081a27;
   border-radius: .8rem;
   margin: .7rem 0;
 }
@@ -652,7 +652,7 @@ body.dark #mode-toggle {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: .8rem 1rem;
+  padding: .6rem 1rem;
   background: var(--bg--color);
   border-radius: .8rem;
   transition: .5s ease;
