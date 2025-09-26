@@ -384,7 +384,7 @@ body.dark #mode-toggle {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, #bc5dae, #7c3274);
+  background: linear-gradient(45deg, #081a27, #081a27  );
   background-size: 400% 400%;
   border-radius: 15px;
   filter: blur(20px);

@@ -1,4 +1,4 @@
-/* Reset / base styles */
+
 body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
@@ -18,17 +18,17 @@ h1 {
 /* Grid layout */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
 }
 
 /* Certificate card */
 .card {
-    width: 380px;
+    width: 200px;
     height: auto;
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(49, 83, 95, 0.1);
+    box-shadow: 0 4px 15px rgba(26, 70, 85, 0.1);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -52,8 +52,28 @@ h1 {
     color: #fff;
 }
 
-/* Example brand color (AWS orange) */
+/* brand color */
 .logo.aws {
+    background: #3a7e8c;
+}
+
+.logo.python {
+    background: #3a7e8c;
+}
+
+.logo.sql {
+    background: #3a7e8c;
+}
+
+.logo.robotics {
+    background: #3a7e8c;
+}
+
+.logo.figma {
+    background: #3a7e8c;
+}
+
+.logo.uiux {
     background: #3a7e8c;
 }
 
