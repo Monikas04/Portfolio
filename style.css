@@ -420,14 +420,15 @@ body.dark #mode-toggle {
 
 .projects-section {
   padding: 60px 20px;
-  background-color: #fbf7f7;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 40px;
-  color: #1e1b1c;
+  color: #ffffff;
+  text-align: center;
 }
 
 .projects-container {
