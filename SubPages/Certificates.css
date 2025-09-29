@@ -8,6 +8,29 @@ body {
     padding: 2rem;
 }
 
+ .container {
+    display: flex;
+    flex-wrap: wrap;      /* allows items to move to next row on small screens */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+.box {
+    flex: 1 1 250px;      /* flexible width, min 250px */
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+/* Responsive adjustments for smartphones */
+  @media (max-width: 480px) {
+    .box {
+      flex: 1 1 90%;      /* one box per row */
+    }
+  }  
+
 /* Page title */
 h1 {
     text-align: center;
@@ -19,14 +42,14 @@ h1 {
 /* Grid layout */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
 /* Certificate card */
 .card {
-    width: 200px;
-    height: auto;
+    /*width: 200px;
+    height: auto;*/
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(26, 70, 85, 0.1);
@@ -79,6 +102,34 @@ h1 {
 }
 
 .logo.gitgithub {
+    background: #3a7e8c;
+}
+
+.logo.data {
+    background: #3a7e8c;
+}
+
+.logo.powerbi {
+    background: #3a7e8c;
+}
+
+.logo.fandc {
+    background: #3a7e8c;
+}
+
+.logo.excel {
+    background: #3a7e8c;
+}
+
+.logo.data {
+    background: #3a7e8c;
+}
+
+.logo.iot {
+    background: #3a7e8c;
+}
+
+.logo.analytics {
     background: #3a7e8c;
 }
 
