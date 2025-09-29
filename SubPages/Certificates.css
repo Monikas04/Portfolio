@@ -1,3 +1,4 @@
+/*import "Style.css"; */
 
 body {
     margin: 0;
@@ -6,8 +7,6 @@ body {
     color: #000000;
     padding: 2rem;
 }
-
-
 
 /* Page title */
 h1 {
@@ -76,6 +75,10 @@ h1 {
 }
 
 .logo.uiux {
+    background: #3a7e8c;
+}
+
+.logo.gitgithub {
     background: #3a7e8c;
 }
 
