@@ -13,9 +13,7 @@ body {
     grid-template-columns: 1fr; /* stack all cards */
     justify-items: center;
   }
-  .card {
-    width: 90%; /* cards take most of screen */
-  }
+
 }
 
 /* Tablet + Desktop (768px and up) */
@@ -23,9 +21,7 @@ body {
   .grid {
     grid-template-columns: repeat(5, 1fr); /* 5 columns always */
   }
-  .card {
-    width: 100%; /* let grid control width */
-  }
+  
 }
 
 
@@ -46,7 +42,8 @@ h1 {
 
 /* Certificate card */
 .card {
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     background: #ffffff;
     border-radius: 15px;
