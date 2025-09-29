@@ -42,8 +42,7 @@ h1 {
 
 /* Certificate card */
 .card {
-    width: 100%;
-    max-width: 250px;
+    width: 200px;
     height: auto;
     background: #ffffff;
     border-radius: 15px;
