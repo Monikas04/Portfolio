@@ -7,22 +7,6 @@ body {
     padding: 2rem;
 }
 
-/* Mobile (up to 767px) */
-@media (max-width: 767px) {
-  .grid {
-    grid-template-columns: 1fr; /* stack all cards */
-    justify-items: center;
-  }
-
-}
-
-/* Tablet + Desktop (768px and up) */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(5, 1fr); /* 5 columns always */
-  }
-  
-}
 
 
 /* Page title */
@@ -124,3 +108,4 @@ h1 {
 .btn:hover {
     background: #1567ab;
 }
+
