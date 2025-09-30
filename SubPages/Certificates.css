@@ -16,6 +16,61 @@ h1 {
     color: #000000;
 }
 
+/* Modal container */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal content */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+.modal-certificate {
+  position: relative;
+}
+
+.modal-certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Watermark overlay */
+.modal-certificate::after {
+  content: "CONFIDENTIAL";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 48px;
+  color: rgba(255, 0, 0, 0.25);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Grid layout */
 .grid {
     display: grid;
