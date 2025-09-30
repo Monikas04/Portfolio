@@ -18,7 +18,7 @@ h1 {
 
 /* Modal container */
 .modal {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -65,7 +65,7 @@ h1 {
   position: absolute;
   top: 15px;
   right: 25px;
-  color: #fff;
+  color: #b5babe;
   font-size: 36px;
   font-weight: bold;
   cursor: pointer;
@@ -82,7 +82,7 @@ h1 {
 .card {
     /*width: 200px;
     height: auto;*/
-    background: #ffffff;
+    background: #bcbcbc;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(26, 70, 85, 0.1);
     padding: 1.5rem;
@@ -92,10 +92,9 @@ h1 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(21, 67, 96, 0.15);
+    box-shadow: 0 6px 20px rgba(53, 86, 107, 0.674);
 }
 
 .certificate-card {
@@ -109,7 +108,7 @@ h1 {
 }
 
 .certificate-preview img {
-    width: 100%;          /* Low-res display */
+    width: 100%;          
     height: auto;
     filter: brightness(0.9);
     border-radius: 10px;
@@ -124,7 +123,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-30deg);
     font-size: 20px;
-    color: rgba(255, 0, 0, 0.3);
+    color: rgba(255, 0, 0, 0.321);
     pointer-events: none;
     user-select: none;
 }
@@ -218,7 +217,7 @@ h1 {
 /* Button */
 .btn {
     text-decoration: none;
-    background: #0e5178;   /*theme color */
+    background: #0e5178;   
     color: #fff;
     padding: 0.6rem 1rem;
     border-radius: 8px;
@@ -228,6 +227,6 @@ h1 {
 }
 
 .btn:hover {
-    background: #1567ab;
+    background: #2c5f99;
 }
 

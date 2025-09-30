@@ -34,29 +34,28 @@
 
     <script>
       const toggleBtn = document.getElementById("mode-toggle");
-const body = document.body;
+      const body = document.body;
 
-// Check if dark mode was saved earlier
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.remove("light");
-  body.classList.add("dark");
-  toggleBtn.textContent = "☀️";
-}
+  // Check if dark mode was saved earlier
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.remove("light");
+      body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
 
-// Toggle function
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  body.classList.toggle("light");
-
-  if (body.classList.contains("dark")) {
-    toggleBtn.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleBtn.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
-});
-    </script>
+  // Toggle function
+     toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+            if (body.classList.contains("dark")) {
+              toggleBtn.textContent = "☀️";
+              localStorage.setItem("theme", "dark");
+            } else {
+              toggleBtn.textContent = "🌙";
+              localStorage.setItem("theme", "light");
+            }
+          });
+          </script>
 
 
    <!--Home section Design-->
@@ -66,8 +65,7 @@ toggleBtn.addEventListener("click", () => {
             <h1>Monika S</h1>
             <h3>And I'm a <span>Web Developer & UI/UX Designer</span></h3>
             <p>I'm a Web Developer passoniate about building responsive, clean,<br>
-              and user-friendly websites using modern 
-          technologies.</p>
+              and user-friendly websites using modern technologies.</p>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/monika-srini" target="_blank" class="social-btn">
                   <i class="fa-brands fa-linkedin"></i>
@@ -80,10 +78,10 @@ toggleBtn.addEventListener("click", () => {
                 </a>
             </div>
 
-      <!-- Cover Letter Box -->
+       <!-- Cover Letter Box -->
        <div class="cover-letter-box" id="coverLetterBox">
         Cover Letter
-      </div>
+       </div>
 
        <!-- Popup download options placed outside the box -->
         <div class="download-options" id="downloadOptions">
@@ -96,32 +94,32 @@ toggleBtn.addEventListener("click", () => {
          const coverBox = document.getElementById("coverLetterBox");
          const downloadOptions = document.getElementById("downloadOptions");
 
-     // Position the popup below the box dynamically
-     function positionPopup() {
-      const rect = coverBox.getBoundingClientRect();
-      downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
-      downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
-    }
+        // Position the popup below the box dynamically 
+        function positionPopup() {
+          const rect = coverBox.getBoundingClientRect();
+          downloadOptions.style.top = rect.bottom + window.scrollY + 10 + "px";
+          downloadOptions.style.left = rect.left + rect.width/2 + window.scrollX - downloadOptions.offsetWidth/2 + "px";
+        }
 
-     // Toggle popup when box clicked
-     coverBox.addEventListener("click", (e) => {
-      e.stopPropagation();
-      positionPopup();
-      downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
-    });
+        // Toggle popup when box clicked
+        coverBox.addEventListener("click", (e) => {
+          e.stopPropagation();
+          positionPopup();
+          downloadOptions.style.display = downloadOptions.style.display === "block" ? "none" : "block";
+        });
 
-     // Click outside → hide popup
-     document.addEventListener("click", () => {
-      downloadOptions.style.display = "none";
-    });
+        // Click outside → hide popup
+        document.addEventListener("click", () => {
+          downloadOptions.style.display = "none";
+        });
 
-     // Reposition on window resize
-     window.addEventListener("resize", () => {
-      if(downloadOptions.style.display === "block") positionPopup();
-    });
-    
-    </script>
-  </section>     
+        // Reposition on window resize
+        window.addEventListener("resize", () => {
+          if(downloadOptions.style.display === "block") positionPopup();
+        });
+        
+        </script>    
+    </section>     
     
 
 
@@ -161,7 +159,7 @@ toggleBtn.addEventListener("click", () => {
         <div class="skill">⚛️ React</div>
         <div class="skill">📱 UI/UX Design</div>
       </div>
-    </div>
+      </div>
 
      <!-- Backend -->
       <div class="skill-category" data-aos="fade-center" data-aos-delay="200">
@@ -214,10 +212,10 @@ toggleBtn.addEventListener("click", () => {
 
 
 
-<!-- Projects section Design -->
-<section class="projects" id="projects">
-  <h2 class="section-title">My Projects</h2>
-  <div class="projects-container">
+   <!-- Projects section Design -->
+   <section class="projects" id="projects">
+   <h2 class="section-title">My Projects</h2>
+   <div class="projects-container">
 
     <!-- Project 1 -->
     <div class="project-card" onclick="openModal(0)">
