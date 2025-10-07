@@ -383,6 +383,171 @@
     </div>       
     </section>
 
+  <!-- JS for modal functionality -->
+<script>
+ const resourcesData = [
+  {
+    semester: "Semester 1",
+    subjects: [
+      { name: "Programming in C", resources: ["📘 Notes", "📝 Assignments", "💻 Mini Project"] },
+      { name: "Mathematics – I", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Digital Fundamentals", resources: ["📘 Notes", "🔬 Lab Work"] }
+    ]
+  },
+  {
+    semester: "Semester 2",
+    subjects: [
+      { name: "Object Oriented Programming (Java)", resources: ["📘 Notes", "💻 Codes", "📝 Lab Work"] },
+      { name: "Data Structures", resources: ["📘 Notes", "📝 Algorithms", "💻 Programs"] }
+    ]
+  },
+  {
+    semester: "Semester 3",
+    subjects: [
+      { name: "Database Management Systems", resources: ["📘 Notes", "📝 Assignments", "💻 Lab Work"] },
+      { name: "Operating Systems", resources: ["📘 Notes", "🔬 Lab Programs", "📝 Questions"] },
+      { name: "Computer Networks", resources: ["📘 Notes", "📊 Diagrams", "📝 Papers"] }
+    ]
+  },
+  {
+    semester: "Semester 4",
+    subjects: [
+      { name: "Software Engineering", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Design and Analysis of Algorithms", resources: ["📘 Notes", "💻 Programs"] },
+      { name: "Microprocessors", resources: ["📘 Notes", "🔬 Lab Work"] }
+    ]
+  },
+  {
+    semester: "Semester 5",
+    subjects: [
+      { name: "Machine Learning", resources: ["📘 Notes", "📝 Projects", "💻 Code Samples"] },
+      { name: "Compiler Design", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Web Development", resources: ["📘 Notes", "💻 Projects", "🌐 Live Demos"] }
+    ]
+  },
+  {
+    semester: "Semester 6",
+    subjects: [
+      { name: "Artificial Intelligence", resources: ["📘 Notes", "🤖 Case Studies"] },
+      { name: "Cloud Computing", resources: ["📘 Notes", "☁️ Labs", "📝 Assignments"] },
+      { name: "Cyber Security", resources: ["📘 Notes", "🛡️ Papers", "💻 Tools"] }
+    ]
+  }
+];
+
+// ---------- DOM ----------
+const semestersContainer = document.getElementById("semesters");
+const searchInput = document.getElementById("search");
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalBody = document.getElementById("modal-body");
+const modalClose = document.getElementById("modal-close");
+
+// ---------- Render ----------
+function renderSemesters(data) {
+  semestersContainer.innerHTML = "";
+  if (data.length === 0) {
+    semestersContainer.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+
+  data.forEach((sem) => {
+    if (sem.subjects.length === 0) return;
+
+    const card = document.createElement("div");
+    card.className = "semester-card";
+
+    const header = document.createElement("div");
+    header.className = "semester-header";
+    header.textContent = sem.semester;
+
+    const subjects = document.createElement("div");
+    subjects.className = "subjects";
+
+    header.addEventListener("click", () => {
+      subjects.style.display =
+        subjects.style.display === "block" ? "none" : "block";
+    });
+
+    sem.subjects.forEach((sub) => {
+      const subjectDiv = document.createElement("div");
+      subjectDiv.className = "subject";
+
+      const h4 = document.createElement("h4");
+      h4.textContent = sub.name;
+      subjectDiv.appendChild(h4);
+
+      const chips = document.createElement("div");
+      chips.className = "chips";
+
+      sub.resources.forEach((res) => {
+        const chip = document.createElement("span");
+        chip.className = "chip";
+        chip.textContent = res;
+        chip.addEventListener("click", () => {
+          openModal(sub.name, res);
+        });
+        chips.appendChild(chip);
+      });
+
+      subjectDiv.appendChild(chips);
+      subjects.appendChild(subjectDiv);
+    });
+
+    card.appendChild(header);
+    card.appendChild(subjects);
+    semestersContainer.appendChild(card);
+  });
+}
+
+// ---------- Modal ----------
+function openModal(title, content) {
+  modalTitle.textContent = title;
+  modalBody.textContent = "You clicked: " + content;
+  modal.classList.add("show");
+}
+
+modalClose.addEventListener("click", () => modal.classList.remove("show"));
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.remove("show");
+});
+
+// ---------- Search ----------
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+
+  if (query === "") {
+    renderSemesters(resourcesData);
+    return;
+  }
+
+  const filtered = resourcesData
+    .map((sem) => {
+      const matchSemester = sem.semester.toLowerCase().includes(query);
+      const filteredSubjects = sem.subjects.filter((s) =>
+        s.name.toLowerCase().includes(query)
+      );
+      return matchSemester
+        ? { ...sem, subjects: sem.subjects }
+        : { ...sem, subjects: filteredSubjects };
+    })
+    .filter((sem) => sem.subjects.length > 0);
+
+  renderSemesters(filtered);
+});
+
+// ---------- Expand/Collapse ----------
+document.querySelector("[data-action='expandAll']").addEventListener("click", () => {
+  document.querySelectorAll(".subjects").forEach((s) => (s.style.display = "block"));
+});
+document.querySelector("[data-action='collapseAll']").addEventListener("click", () => {
+  document.querySelectorAll(".subjects").forEach((s) => (s.style.display = "none"));
+});
+
+// ---------- Init ----------
+renderSemesters(resourcesData);
+</script>  
+
 
   <!--Contact section Design-->
 
