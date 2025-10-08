@@ -264,8 +264,7 @@
       description: "A personal website to showcase my skills, projects, and resume.",
       tech: "Tech: HTML, CSS, JavaScript",
       links: [
-        { name: "GitHub", url: "#" },
-       
+        { name: "GitHub", url: "#" }  
       ]
     },
     {
@@ -274,8 +273,7 @@
       description: "Designed a Restaurant menu.",
       tech: "Tech: Figma, Adobe XD, Sketch, Prototyping, Wireframing",
       links: [
-        { name: "GitHub", url: "#" },
-      
+        { name: "GitHub", url: "#" }
       ]
     },
     {
@@ -284,8 +282,7 @@
       description: "The scholarship app lets you easily find the scholarship who are really needed.",
       tech: "Tech: JavaScript, c#, HTML, CSS, SSMS",
       links: [
-        { name: "GitHub", url: "#" },
-     
+        { name: "GitHub", url: "#" }
       ]
     }
   ];
@@ -325,7 +322,8 @@
       a.target = '_blank';
       a.style.margin = '0 10px';
       linksDiv.appendChild(a);
-    });
+    }
+  );
   }
 
   function nextProject() {
@@ -385,52 +383,68 @@
 
   <!-- JS for modal functionality -->
 <script>
- const resourcesData = [
+const resourcesData = [
   {
     semester: "Semester 1",
     subjects: [
-      { name: "Programming in C", resources: ["📘 Notes", "📝 Assignments", "💻 Mini Project"] },
-      { name: "Mathematics – I", resources: ["📘 Notes", "📝 Problems"] },
-      { name: "Digital Fundamentals", resources: ["📘 Notes", "🔬 Lab Work"] }
+      { name: "Operating Systems", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied Mathematics – I", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Operating Systems Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Problem Solving using Worksheets", resources: ["📘 Notes", "🔬 Lab Programs"] }
     ]
   },
   {
     semester: "Semester 2",
     subjects: [
-      { name: "Object Oriented Programming (Java)", resources: ["📘 Notes", "💻 Codes", "📝 Lab Work"] },
-      { name: "Data Structures", resources: ["📘 Notes", "📝 Algorithms", "💻 Programs"] }
+      { name: "Computer Networks", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied Mathematics – II", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Computer Networks Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Web Technologies Lab", resources: ["📘 Notes", "🔬 Lab Programs"] }
     ]
   },
-  {
+   {
     semester: "Semester 3",
     subjects: [
-      { name: "Database Management Systems", resources: ["📘 Notes", "📝 Assignments", "💻 Lab Work"] },
-      { name: "Operating Systems", resources: ["📘 Notes", "🔬 Lab Programs", "📝 Questions"] },
-      { name: "Computer Networks", resources: ["📘 Notes", "📊 Diagrams", "📝 Papers"] }
+      { name: "Infrastructure Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Virtualization And Cloud", resources: ["📘 Notes", "📝 Assignments",] },
+      { name: "Allied – III Operational Research", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Virtualization And Cloud Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Infrastructure Management Lab", resources: ["📘 Notes","🔬 Lab Programs"] }
     ]
   },
   {
     semester: "Semester 4",
     subjects: [
-      { name: "Software Engineering", resources: ["📘 Notes", "📝 Assignments"] },
-      { name: "Design and Analysis of Algorithms", resources: ["📘 Notes", "💻 Programs"] },
-      { name: "Microprocessors", resources: ["📘 Notes", "🔬 Lab Work"] }
+      { name: "RDBMS Using Oracle", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Process Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied – IV Statistical Methods And It's Application", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "RDBMS Using Oracle With Oracle Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Allied – IV Statistical Methods And It's Application Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Data Analytics Using Python Internship", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
     ]
   },
   {
     semester: "Semester 5",
     subjects: [
-      { name: "Machine Learning", resources: ["📘 Notes", "📝 Projects", "💻 Code Samples"] },
-      { name: "Compiler Design", resources: ["📘 Notes", "📝 Problems"] },
-      { name: "Web Development", resources: ["📘 Notes", "💻 Projects", "🌐 Live Demos"] }
+      { name: "Software Engineering & Testing", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Client Relationship Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Introduction To Digital Technology", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "IT Cognition And Problem Solving", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Software Testing Lab", resources: ["📘 Notes", "🔬 Lab Work"] },
+      { name: "Client Relationship Management Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Digital Technology Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "UI/UX Design Internship", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
     ]
   },
   {
     semester: "Semester 6",
     subjects: [
-      { name: "Artificial Intelligence", resources: ["📘 Notes", "🤖 Case Studies"] },
-      { name: "Cloud Computing", resources: ["📘 Notes", "☁️ Labs", "📝 Assignments"] },
-      { name: "Cyber Security", resources: ["📘 Notes", "🛡️ Papers", "💻 Tools"] }
+      { name: "Java Programming", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Python Programming And Data Structures", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Machine Learning", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Introduction To Data Science", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Java Programming Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Scholarship Management System", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
     ]
   }
 ];
@@ -450,10 +464,8 @@ function renderSemesters(data) {
     semestersContainer.innerHTML = "<p>No results found.</p>";
     return;
   }
-
   data.forEach((sem) => {
     if (sem.subjects.length === 0) return;
-
     const card = document.createElement("div");
     card.className = "semester-card";
 
@@ -485,7 +497,7 @@ function renderSemesters(data) {
         chip.className = "chip";
         chip.textContent = res;
         chip.addEventListener("click", () => {
-          openModal(sub.name, res);
+          openResourceModal(sub.name, res); // UPDATED FUNCTION NAME
         });
         chips.appendChild(chip);
       });
@@ -501,7 +513,7 @@ function renderSemesters(data) {
 }
 
 // ---------- Modal ----------
-function openModal(title, content) {
+function openResourceModal(title, content) {  // RENAMED
   modalTitle.textContent = title;
   modalBody.textContent = "You clicked: " + content;
   modal.classList.add("show");
@@ -515,12 +527,10 @@ modal.addEventListener("click", (e) => {
 // ---------- Search ----------
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
-
   if (query === "") {
     renderSemesters(resourcesData);
     return;
   }
-
   const filtered = resourcesData
     .map((sem) => {
       const matchSemester = sem.semester.toLowerCase().includes(query);
@@ -532,7 +542,6 @@ searchInput.addEventListener("input", (e) => {
         : { ...sem, subjects: filteredSubjects };
     })
     .filter((sem) => sem.subjects.length > 0);
-
   renderSemesters(filtered);
 });
 
