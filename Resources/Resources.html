@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="Certificates.css">       
+</head>
+
+
+
+
+
+<section class="resources" id="resources">
+    <div class="resources-content">
+      <header>
+        <h2>Resources - Semester</h2>
+        <p class="lead">Organize notes, assignment, projects and quick references by semester & subject.</p>
+      </header>
+
+      <div class="controls">
+        <div class="search">
+          <input id="search" placeholder="Search semester, subject, topic..." />
+        </div>
+        <div class="filter">
+          <button class="btn" data-action="expandAll">Expand all</button>
+          <button class="btn" data-action="collapseAll">Collapse all</button>
+        </div>
+      </div>
+
+      <!--Semester list-->
+      <main class="semesters" id="semesters">
+      </main>
+
+      <!--modal for previous-->
+      <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <strong id="modal-title">Preview</strong>
+          <button id="modal-close" class="link">Close</button>
+          </div>
+          <div id="modal-body"style="margin-top: 12px; color:var(--muted); font-size:14px"></div>
+      </div>
+    </div>  
+    </div>       
+    </section>
+
+  <!-- JS for modal functionality -->
+<script>
+const resourcesData = [
+  {
+    semester: "Semester 1",
+    subjects: [
+      { name: "Operating Systems", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied Mathematics – I", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Operating Systems Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Problem Solving using Worksheets", resources: ["📘 Notes", "🔬 Lab Programs"] }
+    ]
+  },
+  {
+    semester: "Semester 2",
+    subjects: [
+      { name: "Computer Networks", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied Mathematics – II", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Computer Networks Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Web Technologies Lab", resources: ["📘 Notes", "🔬 Lab Programs"] }
+    ]
+  },
+  {
+    semester: "Semester 3",
+    subjects: [
+      { name: "Infrastructure Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Virtualization And Cloud", resources: ["📘 Notes", "📝 Assignments",] },
+      { name: "Allied – III Operational Research", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "Virtualization And Cloud Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Infrastructure Management Lab", resources: ["📘 Notes","🔬 Lab Programs"] }
+    ]
+  },
+  {
+    semester: "Semester 4",
+    subjects: [
+      { name: "RDBMS Using Oracle", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Process Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Allied – IV Statistical Methods And It's Application", resources: ["📘 Notes", "📝 Problems"] },
+      { name: "RDBMS Using Oracle With Oracle Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Allied – IV Statistical Methods And It's Application Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Data Analytics Using Python Internship", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
+    ]
+  },
+  {
+    semester: "Semester 5",
+    subjects: [
+      { name: "Software Engineering & Testing", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Client Relationship Management", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Introduction To Digital Technology", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "IT Cognition And Problem Solving", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Software Testing Lab", resources: ["📘 Notes", "🔬 Lab Work"] },
+      { name: "Client Relationship Management Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Digital Technology Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "UI/UX Design Internship", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
+    ]
+  },
+  {
+    semester: "Semester 6",
+    subjects: [
+      { name: "Java Programming", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Python Programming And Data Structures", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Machine Learning", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Introduction To Data Science", resources: ["📘 Notes", "📝 Assignments"] },
+      { name: "Java Programming Lab", resources: ["📘 Notes", "🔬 Lab Programs"] },
+      { name: "Scholarship Management System", resources: ["💻 Tools", "💻 Projects", "🌐 Live Demos"] }
+    ]
+  }
+];
+
+// ---------- DOM ----------
+const semestersContainer = document.getElementById("semesters");
+const searchInput = document.getElementById("search");
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalBody = document.getElementById("modal-body");
+const modalClose = document.getElementById("modal-close");
+
+// ---------- Render ----------
+function renderSemesters(data) {
+  semestersContainer.innerHTML = "";
+  if (data.length === 0) {
+    semestersContainer.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+  data.forEach((sem) => {
+    if (sem.subjects.length === 0) return;
+    const card = document.createElement("div");
+    card.className = "semester-card";
+
+    const header = document.createElement("div");
+    header.className = "semester-header";
+    header.textContent = sem.semester;
+
+    const subjects = document.createElement("div");
+    subjects.className = "subjects";
+
+    header.addEventListener("click", () => {
+      subjects.style.display =
+        subjects.style.display === "block" ? "none" : "block";
+    });
+
+    sem.subjects.forEach((sub) => {
+      const subjectDiv = document.createElement("div");
+      subjectDiv.className = "subject";
+
+      const h4 = document.createElement("h4");
+      h4.textContent = sub.name;
+      subjectDiv.appendChild(h4);
+
+      const chips = document.createElement("div");
+      chips.className = "chips";
+
+      sub.resources.forEach((res) => {
+        const chip = document.createElement("span");
+        chip.className = "chip";
+        chip.textContent = res;
+        chip.addEventListener("click", () => {
+          openResourceModal(sub.name, res); // UPDATED FUNCTION NAME
+        });
+        chips.appendChild(chip);
+      });
+
+      subjectDiv.appendChild(chips);
+      subjects.appendChild(subjectDiv);
+    });
+
+    card.appendChild(header);
+    card.appendChild(subjects);
+    semestersContainer.appendChild(card);
+  });
+}
+
+// ---------- Modal ----------
+function openResourceModal(title, content) {  // RENAMED
+  modalTitle.textContent = title;
+  modalBody.textContent = "You clicked: " + content;
+  modal.classList.add("show");
+}
+
+modalClose.addEventListener("click", () => modal.classList.remove("show"));
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.remove("show");
+});
+
+// ---------- Search ----------
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+  if (query === "") {
+    renderSemesters(resourcesData);
+    return;
+  }
+  const filtered = resourcesData
+    .map((sem) => {
+      const matchSemester = sem.semester.toLowerCase().includes(query);
+      const filteredSubjects = sem.subjects.filter((s) =>
+        s.name.toLowerCase().includes(query)
+      );
+      return matchSemester
+        ? { ...sem, subjects: sem.subjects }
+        : { ...sem, subjects: filteredSubjects };
+    })
+    .filter((sem) => sem.subjects.length > 0);
+  renderSemesters(filtered);
+});
+
+// ---------- Expand/Collapse ----------
+document.querySelector("[data-action='expandAll']").addEventListener("click", () => {
+  document.querySelectorAll(".subjects").forEach((s) => (s.style.display = "block"));
+});
+document.querySelector("[data-action='collapseAll']").addEventListener("click", () => {
+  document.querySelectorAll(".subjects").forEach((s) => (s.style.display = "none"));
+});
+
+// ---------- Init ----------
+renderSemesters(resourcesData);
+</script>  
