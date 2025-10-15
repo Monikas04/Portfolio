@@ -6,12 +6,11 @@ body {
     padding: 2rem;
 }
 
-
 .resources {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #17464f;
+  /*background-color: #17464f;*/
   text-align: right;
 }
 
@@ -56,14 +55,14 @@ body {
   font-size: 14px;
   border: none;
   border-radius: 6px;
-  background: #184463;
+  background: #152b3a;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .controls .btn:hover {
-  background-color: #0f2a36;
+  background-color: #4f595e;
 }
 
 /*semesster cards*/
@@ -84,7 +83,7 @@ body {
 
 .semester-header {
   padding: 14px 18px;
-  background: #17464f;
+  background: #566164;
   cursor: pointer;
   font-weight: 600;
   display: flex;

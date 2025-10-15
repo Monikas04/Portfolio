@@ -266,8 +266,8 @@ body.dark #mode-toggle {
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     background: var(--bg--color);
     padding: 15rem 2rem 2rem;
@@ -590,11 +590,6 @@ body.dark #mode-toggle {
     max-height: 50vh;
   }
 }
-
-
-/* resource section design */
-
-
 
 /* contact section design */
 
