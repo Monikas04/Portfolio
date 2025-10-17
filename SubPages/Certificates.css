@@ -15,7 +15,7 @@
 /* Theme Colors */
 :root {
   --bg-color: #17464f;
-  --text-color: #ffffff;
+  --text-color: #000000;
 }
 
 body {
@@ -63,12 +63,21 @@ body {
     color: var(--text-color);
 }
 
+/* Toggle Button */
 #mode-toggle {
-  background: none;
+  margin-top: 8px;
+  padding: 5px 8px;
   border: none;
-  font-size: 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
+  background-color: #17464f;
   color: white;
+  font-size: 16px;
+}
+
+body.dark #mode-toggle {
+  background-color: #17464f;
+  color: rgb(0, 0, 0);
 }
 
 /* Section styling */
@@ -88,6 +97,11 @@ body.dark {
   background-color: #121212;
   color: #f1f1f1;
 }
+
+/*h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}*/
 
 /* Page title */
 h1 {

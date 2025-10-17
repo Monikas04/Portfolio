@@ -61,12 +61,16 @@ body {
     color: var(--text-color);
 }
 
+/* Toggle Button */
 #mode-toggle {
-  background: none;
+  margin-top: 8px;
+  padding: 5px 8px;
   border: none;
-  font-size: 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
+  background-color: #17464f;
   color: white;
+  font-size: 16px;
 }
 
 /* Section styling */
