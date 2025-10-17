@@ -1,11 +1,92 @@
 /*import "Style.css"; */
 
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Theme Colors */
+:root {
+  --bg-color: #17464f;
+  --text-color: #ffffff;
+}
+
 body {
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-    background: #17464f;
-    color: #000000;
-    padding: 2rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+/* Header Section */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 9%;
+  background: #17464f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  cursor: default;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+}
+
+#mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Section styling */
+section.certificates {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* Default Light Mode */
+body.light {
+  background-color: #17464f;
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 /* Page title */
@@ -13,7 +94,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Modal container */
