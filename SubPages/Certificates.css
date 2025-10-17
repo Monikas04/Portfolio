@@ -57,12 +57,6 @@ body {
   transition: 0.3s;
 }
 
-
-.navbar a:hover,
-.navbar a.active {
-    color: var(--text-color);
-}
-
 /* Toggle Button */
 #mode-toggle {
   margin-top: 8px;
@@ -73,11 +67,6 @@ body {
   background-color: #17464f;
   color: white;
   font-size: 16px;
-}
-
-body.dark #mode-toggle {
-  background-color: #17464f;
-  color: rgb(0, 0, 0);
 }
 
 /* Section styling */
@@ -97,6 +86,34 @@ body.dark {
   background-color: #121212;
   color: #f1f1f1;
 }
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+  .sidebar {
+    width: 30%;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}  
+
 
 /*h1 {
   font-size: 2rem;
