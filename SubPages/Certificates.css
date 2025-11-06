@@ -1,4 +1,5 @@
 /*import "Style.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Basic Reset */
 * {
@@ -30,7 +31,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 9%;
+  padding: 1rem 9%;
   background: #17464f;
   display: flex;
   align-items: center;
@@ -39,7 +40,7 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: white;
   cursor: default;
@@ -56,6 +57,17 @@ body {
   font-weight: 600;
   transition: 0.3s;
 }
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+}
+
+#menu-icons {
+    font-size: 3.6rem;
+    color: var(--text--color);
+    display: none;
+} 
 
 /* Toggle Button */
 #mode-toggle {
@@ -86,6 +98,7 @@ body.dark {
   background-color: #121212;
   color: #f1f1f1;
 }
+
 
 /* Mobile (up to 767px) */
 @media (max-width: 767px) {
